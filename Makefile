@@ -63,6 +63,7 @@ build:
 	sam build --template template.yaml
 
 package:
-	sam package --template-file .aws-sam/build/lambda/template.yaml --output-template-file packaged.yaml --s3-bucket samtestpoc
+	sam package --template-file .aws-sam/build/template.yaml --output-template-file packaged.yaml --s3-bucket samtestpoc --s3-prefix lambda
+
 deploy:
 	sam deploy --template-file packaged.yaml --stack-name my-stack-name --capabilities CAPABILITY_IAM
