@@ -17,8 +17,8 @@ Resources:
       Runtime: python3.8
       Environment:
         Variables:
-          ENV: ${ENV}
-          AWS_REGION_NAME: ${AWS_REGION_NAME}
+          ENV: Test
+          AWS_REGION_NAME: ap-south-1
     ArtifactStore:
       Type: S3
       Bucket: arn:aws:s3:::samtestpoc
